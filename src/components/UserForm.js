@@ -3,7 +3,28 @@ import React from 'react'
 const UserForm = () => {
   return (
     <div>
-        <h1>Ola</h1>
+      <div className='form-control'>
+        <label htmlFor='name'>Nome:</label>
+        <input
+          type='text'
+          name='name'
+          id='name'
+          placeholder='Digite seu nome'
+          required
+          autoComplete='off' />
+      </div>
+
+      <div className='form-control'>
+        <label htmlFor='email'>Email:</label>
+        <input
+          type='email'
+          name='email'
+          id='email'
+          placeholder='Digite seu e-mail'
+          required
+          autoComplete='off' />
+      </div>
+
     </div>
   )
 }
