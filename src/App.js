@@ -2,7 +2,7 @@
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr'
 import { FiSend } from 'react-icons/fi'
 import UseForm from './components/UserForm';
-import ReviewForm from './components/ReviewForm';
+import ReviewForm from './components/ReviewForm/ReviewForm';
 import EndForm from './components/EndForm';
 import Steps from './components/Steps/Steps';
 
