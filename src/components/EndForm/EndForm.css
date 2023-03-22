@@ -1,0 +1,28 @@
+.end-container {
+    text-align: center;
+}
+
+.end-container h2 {
+    margin-bottom: 1rem;
+}
+
+.end-container p {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.end-container h3 {
+    margin-bottom: 1rem;
+}
+
+.review-data {
+    text-align: left;
+}
+
+.review-data svg {
+    margin-left: 5px;
+}
+
+.review-data span {
+    font-weight: bold;
+}

@@ -1,19 +1,38 @@
 // Componentes
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr'
 import { FiSend } from 'react-icons/fi'
-import UseForm from './components/UserForm';
+import UserForm from './components/UserForm';
 import ReviewForm from './components/ReviewForm/ReviewForm';
-import EndForm from './components/EndForm';
+import EndForm from './components/EndForm/EndForm';
 import Steps from './components/Steps/Steps';
 
 // Hook
 import useForm from './hooks/useForm';
+import { useState } from 'react';
 
 import './App.css';
 
+const formTemplate = {
+  name: '',
+  email: '',
+  review: '',
+  comment: '',
+}
+
 function App() {
 
-  const useComponents = [<UseForm />, <ReviewForm />, <EndForm />];
+  const [data, setData] = useState(formTemplate);
+
+  const updateFieldHandler = (key, value) => {
+    setData((prev) => {
+      return { ...prev, [key]: value };
+    })
+  }
+
+  const useComponents = [
+  <UserForm data={data} updateFieldHandler={updateFieldHandler} />, 
+  <ReviewForm data={data} updateFieldHandler={updateFieldHandler} />, 
+  <EndForm data={data} />];
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } = useForm(useComponents)
 
